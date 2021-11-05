@@ -1,5 +1,5 @@
-package application;
+package controller;
 
-public class SampleController {
+public class SampleControllerEditar {
 	
 }
