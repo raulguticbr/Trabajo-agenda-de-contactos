@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Persona;
@@ -24,6 +25,20 @@ public class SampleControllerPrincipal implements Initializable {
 	private TableColumn columna1;
 	@FXML
 	private TableColumn columna2;
+	@FXML
+	private Text texto1;
+	@FXML
+	private Text texto2;
+	@FXML
+	private Text texto3;
+	@FXML
+	private Text texto4;
+	@FXML
+	private Text texto5;
+	@FXML
+	private Text texto6;
+	@FXML
+	private Text texto7;
 	@FXML
 	private void agregar(ActionEvent event) throws IOException {
 		FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/SampleAgregar.fxml"));
@@ -38,7 +53,21 @@ public class SampleControllerPrincipal implements Initializable {
 		tabla.getItems().add(p);
 		
 	}
+	@FXML
+	private void mostrar(ActionEvent event) {
+		Persona persona=(Persona) tabla.getSelectionModel().getSelectedItem();
+		texto1.setText(persona.getNombre());
+		texto2.setText(persona.getApellidos());
+		texto3.setText(persona.getDireccion());
+		texto4.setText(persona.getCiudad());
+		texto5.setText(Integer.toString(persona.getCodigo()));
+		texto6.setText(persona.getDate());
+		texto7.setText(Integer.toString(persona.getTelefono()));
+		
+		
+		
 	
+	}
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		columna1.setCellValueFactory(new PropertyValueFactory<>("nombre"));
 		columna2.setCellValueFactory(new PropertyValueFactory<>("apellidos"));

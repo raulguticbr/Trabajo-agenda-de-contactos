@@ -24,7 +24,7 @@ public class SampleControllerAgregar {
 	private TextField TelefAñadir;
 	@FXML
 	private Button salir;
-	@FXML
+	
 	private Persona persona;
 	@FXML
 	private void anadir(ActionEvent event) {

@@ -56,6 +56,7 @@
                 </Menu>
               </menus>
             </MenuBar>
+            <Button layoutX="317.0" layoutY="371.0" mnemonicParsing="false" onAction="#mostrar" prefHeight="38.0" prefWidth="81.0" text="Mostrar" />
          </children>
       </AnchorPane>
    </top>
