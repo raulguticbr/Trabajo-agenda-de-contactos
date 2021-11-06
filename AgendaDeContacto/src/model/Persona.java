@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Date;
-
 public class Persona {
 	private String nombre,apellidos,direccion,ciudad,date;
 	private int codigo, telefono;

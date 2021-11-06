@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SampleControllerPrincipal">
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SampleControllerPrincipal">
    <top>
       <AnchorPane prefHeight="680.0" prefWidth="675.0" BorderPane.alignment="CENTER">
          <children>
@@ -35,7 +35,7 @@
             <Text fx:id="texto6" layoutX="552.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" />
             <Text fx:id="texto7" layoutX="552.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" />
             <Button layoutX="387.0" layoutY="628.0" mnemonicParsing="false" onAction="#agregar" prefHeight="38.0" prefWidth="81.0" text="New..." />
-            <Button fx:id="editar" layoutX="478.0" layoutY="628.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="81.0" text="Edit..." />
+            <Button fx:id="editar" layoutX="478.0" layoutY="628.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="81.0" text="Edit..." />
             <Button fx:id="borrar" layoutX="567.0" layoutY="628.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="81.0" text="Delete" />
             <MenuBar layoutX="5.0" layoutY="6.0" prefHeight="41.0" prefWidth="675.0">
               <menus>

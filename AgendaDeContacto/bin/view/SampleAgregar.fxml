@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SampleControllerAgregar">
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SampleControllerAgregar">
    <center>
       <GridPane prefHeight="443.0" prefWidth="518.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -63,13 +63,34 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="NombreAñadir" GridPane.columnIndex="1" />
-            <TextField fx:id="ApellidosAñadir" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="DireccionAñadir" prefHeight="25.0" prefWidth="298.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="CiudadAñadir" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="CodAñadir" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="DateAñadir" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField fx:id="TelefAñadir" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="NombreAñadir" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="ApellidosAñadir" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="DireccionAñadir" prefHeight="25.0" prefWidth="298.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="CiudadAñadir" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="CodAñadir" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="DateAñadir" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="TelefAñadir" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
             <GridPane GridPane.columnIndex="1" GridPane.rowIndex="7">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
