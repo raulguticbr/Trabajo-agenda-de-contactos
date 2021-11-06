@@ -98,10 +98,18 @@ public class SampleControllerPrincipal implements Initializable {
 		
 		
 		
-		
 	
 		
 	}
+	@FXML
+	private void borrar(ActionEvent event) {
+		Persona persona = (Persona)tabla.getSelectionModel().getSelectedItem();
+		if(persona!=null) {
+			tabla.getItems().remove(persona);
+			tabla.refresh();
+		}
+	}
+	
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		columna1.setCellValueFactory(new PropertyValueFactory<>("nombre"));
 		columna2.setCellValueFactory(new PropertyValueFactory<>("apellidos"));
