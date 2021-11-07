@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SampleControllerPrincipal">
+   <top>
+      <AnchorPane prefHeight="680.0" prefWidth="675.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabla" layoutX="5.0" layoutY="47.0" onMouseClicked="#mostrar" prefHeight="630.0" prefWidth="296.0">
+              <columns>
+                <TableColumn fx:id="columna1" prefWidth="151.0" text="First Name" />
+                <TableColumn fx:id="columna2" prefWidth="144.0" text="Last Name" />
+              </columns>
+            </TableView>
+            <Text layoutX="324.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First  Name">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Text>
+            <Text layoutX="324.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Text>
+            <Text layoutX="324.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Street">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Text>
+            <Text layoutX="324.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Text>
+            <Text layoutX="324.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postal Code">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Text>
+            <Text layoutX="324.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthday">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Text>
+            <Text layoutX="324.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Text>
+            <Text fx:id="texto1" layoutX="552.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="texto2" layoutX="552.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="texto3" layoutX="552.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="texto4" layoutX="552.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="texto5" layoutX="552.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="texto6" layoutX="552.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="texto7" layoutX="552.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Button layoutX="387.0" layoutY="628.0" mnemonicParsing="false" onAction="#agregar" prefHeight="38.0" prefWidth="81.0" text="New..." />
+            <Button fx:id="editar" layoutX="478.0" layoutY="628.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="81.0" text="Edit..." />
+            <Button fx:id="borrar" layoutX="567.0" layoutY="628.0" mnemonicParsing="false" onAction="#borrar" prefHeight="38.0" prefWidth="81.0" text="Delete" />
+            <MenuBar layoutX="4.0" layoutY="6.0" prefHeight="41.0" prefWidth="668.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#salir" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#borrar" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
