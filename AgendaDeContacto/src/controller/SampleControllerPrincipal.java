@@ -10,9 +10,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -54,16 +56,34 @@ public class SampleControllerPrincipal implements Initializable {
 		
 	}
 	@FXML
-	private void mostrar(ActionEvent event) {
+	private void mostrar(MouseEvent event) {
 		Persona persona=(Persona) tabla.getSelectionModel().getSelectedItem();
 		if(persona!=null) {
-			texto1.setText(persona.getNombre());
-			texto2.setText(persona.getApellidos());
-			texto3.setText(persona.getDireccion());
-			texto4.setText(persona.getCiudad());
-			texto5.setText(Integer.toString(persona.getCodigo()));
-			texto6.setText(persona.getDate());
-			texto7.setText(Integer.toString(persona.getTelefono()));
+			try {
+				texto1.setText(persona.getNombre());
+				texto2.setText(persona.getApellidos());
+				texto3.setText(persona.getDireccion());
+				texto4.setText(persona.getCiudad());
+				texto5.setText(Integer.toString(persona.getCodigo()));
+				texto6.setText(persona.getDate());
+				texto7.setText(Integer.toString(persona.getTelefono()));
+				
+			}
+			catch(Exception e){
+				Alert alert= new  Alert(Alert.AlertType.ERROR);
+				alert.setHeaderText(null);
+				alert.setTitle("Error");
+				alert.setContentText("El formato no es correcto, revisa que no hayas escrito un caracter donde no debas o hayas dejado algun campo vacio.");
+				alert.showAndWait();
+			}
+			
+		}
+		else {
+			Alert alert= new  Alert(Alert.AlertType.ERROR);
+			alert.setHeaderText(null);
+			alert.setTitle("Error");
+			alert.setContentText("No se ha seleccionado ninguna persona en la tabla");
+			alert.showAndWait();
 		}
 		
 		
@@ -72,7 +92,7 @@ public class SampleControllerPrincipal implements Initializable {
 	
 	}
 	@FXML
-	private void editar(ActionEvent event) throws IOException {
+	private void editar(ActionEvent event ) throws IOException {
 		Persona person =(Persona) tabla.getSelectionModel().getSelectedItem();
 		if (person!=null) {
 			FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/SampleEditar.fxml"));
@@ -95,6 +115,13 @@ public class SampleControllerPrincipal implements Initializable {
 				tabla.refresh();
 			}
 		}
+		else {
+			Alert alert= new  Alert(Alert.AlertType.ERROR);
+			alert.setHeaderText(null);
+			alert.setTitle("Error");
+			alert.setContentText("No se ha seleccionado ninguna persona en la tabla");
+			alert.showAndWait();
+		}
 		
 		
 		
@@ -108,6 +135,26 @@ public class SampleControllerPrincipal implements Initializable {
 			tabla.getItems().remove(persona);
 			tabla.refresh();
 		}
+		else {
+			Alert alert= new  Alert(Alert.AlertType.ERROR);
+			alert.setHeaderText(null);
+			alert.setTitle("Error");
+			alert.setContentText("No se ha seleccionado ninguna persona en la tabla");
+			alert.showAndWait();
+		}
+	}
+	@FXML
+	private void salir (ActionEvent event) {
+		Stage stage =(Stage) this.texto1.getScene().getWindow();
+		stage.close();
+	}
+	@FXML 
+	private void about(ActionEvent event) {
+		Alert alert= new  Alert(Alert.AlertType.INFORMATION);
+		alert.setHeaderText(null);
+		alert.setTitle("About");
+		alert.setContentText("No se que poner en esta fucionalidad, solamente comentar que los integrantes de este proyecto somos Juan, Zenón y Raúl");
+		alert.showAndWait();
 	}
 	
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -119,6 +166,7 @@ public class SampleControllerPrincipal implements Initializable {
 		
 		
 	}
+	
 
 	public TableView getTabla() {
 		return tabla;
