@@ -12,7 +12,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SampleControllerAgregar">
    <center>
-      <GridPane prefHeight="443.0" prefWidth="518.0" BorderPane.alignment="CENTER">
+      <GridPane prefHeight="443.0" prefWidth="518.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="234.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="284.0" />
@@ -30,37 +30,37 @@
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" textAlignment="CENTER" wrappingWidth="259.1533203125">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold Italic" size="14.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos" textAlignment="CENTER" wrappingWidth="257.1416015625" GridPane.rowIndex="1">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold Italic" size="14.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección" textAlignment="CENTER" wrappingWidth="257.845703125" GridPane.rowIndex="2">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold Italic" size="14.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad" textAlignment="CENTER" wrappingWidth="254.5927734375" GridPane.rowIndex="3">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold Italic" size="14.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono" textAlignment="CENTER" wrappingWidth="259.0791015625" GridPane.rowIndex="6">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold Italic" size="14.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Código Postal" textAlignment="CENTER" wrappingWidth="258.0302734375" GridPane.rowIndex="4">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold Italic" size="14.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de nacimiento" textAlignment="CENTER" wrappingWidth="258.44921875" GridPane.rowIndex="5">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold Italic" size="14.0" />
                </font>
             </Text>
             <TextField fx:id="NombreAñadir" GridPane.columnIndex="1">
