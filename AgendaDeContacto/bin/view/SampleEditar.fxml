@@ -61,15 +61,10 @@
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin></TextField>
-            <TextField fx:id="TelefAñadir" GridPane.columnIndex="1" GridPane.rowIndex="6">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin></TextField>
-            <TextField fx:id="DateAñadir" GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin></TextField>
-            <TextField fx:id="CodAñadir" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TextField fx:id="DireccionAñadir" prefHeight="25.0" prefWidth="286.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin></TextField>
@@ -77,10 +72,15 @@
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin></TextField>
-            <TextField fx:id="DireccionAñadir" prefHeight="25.0" prefWidth="286.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
+            <TextField fx:id="CodAñadir" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="DateAñadir" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="TelefAñadir" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin></TextField>

@@ -52,7 +52,26 @@ public class SampleControllerPrincipal implements Initializable {
 		stage.setScene(scene);
 		stage.showAndWait();
 		Persona p= controlador.getPersona();
-		tabla.getItems().add(p);
+		if(p!=null) {
+			if(!tabla.getItems().contains(p)) {
+				tabla.getItems().add(p);
+				tabla.refresh();
+				Alert alert= new  Alert(Alert.AlertType.INFORMATION);
+				alert.setHeaderText(null);
+				alert.setTitle("Exito");
+				alert.setContentText("La persona se ha añadido correctamente.");
+				alert.showAndWait();
+			}
+			else {
+				Alert alert= new  Alert(Alert.AlertType.ERROR);
+				alert.setHeaderText(null);
+				alert.setTitle("Error");
+				alert.setContentText("La persona que intenta añadir ya existe en la agenda.");
+				alert.showAndWait();
+			}
+			
+		}
+		
 		
 	}
 	@FXML
@@ -82,7 +101,7 @@ public class SampleControllerPrincipal implements Initializable {
 			Alert alert= new  Alert(Alert.AlertType.ERROR);
 			alert.setHeaderText(null);
 			alert.setTitle("Error");
-			alert.setContentText("No se ha seleccionado ninguna persona en la tabla");
+			alert.setContentText("No se ha seleccionado ninguna persona en la tabla.");
 			alert.showAndWait();
 		}
 		
@@ -105,7 +124,8 @@ public class SampleControllerPrincipal implements Initializable {
 			stage.showAndWait();
 			
 			if(controlador.getPersona()!=null) {
-				person.setNombre(controlador.getPersona().getNombre());
+				if(!tabla.getItems().contains(controlador.getPersona())) {
+					person.setNombre(controlador.getPersona().getNombre());
 				person.setApellidos(controlador.getPersona().getApellidos());
 				person.setDireccion(controlador.getPersona().getDireccion());
 				person.setCiudad(controlador.getPersona().getCiudad());
@@ -113,6 +133,20 @@ public class SampleControllerPrincipal implements Initializable {
 				person.setCodigo(controlador.getPersona().getCodigo());
 				person.setTelefono(controlador.getPersona().getTelefono());
 				tabla.refresh();
+				Alert alert= new  Alert(Alert.AlertType.INFORMATION);
+				alert.setHeaderText(null);
+				alert.setTitle("Exito");
+				alert.setContentText("La persona de ha editado correctamente.");
+				alert.showAndWait();
+				}
+				else {
+					Alert alert= new  Alert(Alert.AlertType.INFORMATION);
+					alert.setHeaderText(null);
+					alert.setTitle("Exito");
+					alert.setContentText("La edicion de esta persona corresponde a otra persona ya existente.");
+					alert.showAndWait();
+				}
+				
 			}
 		}
 		else {
